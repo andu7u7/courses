@@ -1,0 +1,21 @@
+{
+  "name": "async-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "callbacks",
+    "async",
+    "node-fetch"
+  ],
+  "author": "Andy Rojas ar0330yt@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "3.3.0",
+    "xmlhttprequest": "1.8.0"
+  },
+  "type": "module"
+}
