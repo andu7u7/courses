@@ -53,6 +53,52 @@
     - Virtual DOM: se basa en la creación de un árbol de elementos en memoria (copia del DOM), y luego se renderiza en el DOM.
     - Incremental DOM: se basa en la modificación del DOM directamente, pero solo modifica los elementos que han cambiado.
 
+### **ENFOQUES - RENDERING**
+- **Server Side Rendering (SSR) (Viejo Jenkins en su camión)**: 
+    - Renderizado del lado del servidor.
+    - Se basa en la creación de una página HTML completa en el servidor.        
+    - Proceso:
+        1. El servidor genera el HTML completo de la página, incluyendo el contenido.
+        2. El servidor envía el HTML renderizado al navegador.
+        3. El navegador muestra directamente el contenido recibido.
+        4. La página es interactiva y completamente funcional una vez que el contenido se muestra en el navegador.
+
+- **Client Side Rendering (CSR)**: 
+    - Renderizado del lado del cliente.
+    - Se basa en la creación de una página HTML básica en el servidor, y luego se completa con JavaScript en el navegador.
+    - Proceso:
+        1. El servidor envía una versión básica de la página al navegador, junto con un archivo JavaScript.
+        2. El navegador descarga el JavaScript y lo ejecuta.
+        3. El JavaScript obtiene los datos necesarios y renderiza el contenido en el navegador.
+        4. La página se vuelve interactiva una vez que el JavaScript finaliza la renderización y carga de datos.
+
+- **Static Site Generation (SSG)**:
+    - Se basa en la creación de una página HTML estática en el servidor.
+    - Solo para páginas que no cambian frecuentemente.
+    - Proceso:
+        1. El servidor genera el HTML completo de la página, incluyendo el contenido.
+        2. El servidor envía el HTML renderizado al navegador.
+        3. El navegador muestra directamente el contenido recibido.
+        4. La página es interactiva y completamente funcional una vez que el contenido se muestra en el navegador.
+
+- **Progressive Server Side Rendering (SSR)**:
+    - Se basa en la combinación de SSR y CSR.
+    - Muestra rápidamente el contenido inicial renderizado en el servidor al usuario mientras el resto de recursos se cargan en segundo plano. 
+    - Durante la solicitud:
+        - El servidor genera y envía un HTML parcialmente renderizado al navegador. 
+        - El navegador sigue cargando el resto de los recursos necesarios.
+    - Finalizando la solicitud:
+        - El navegador descarga y ejecuta el JavaScript necesario.
+        - El JavaScript completa el renderizado y la interacción en el lado del cliente.
+
+- **Extra**
+    - **Progressive Web App (PWA)**:
+        - Su proposito es mejorar la experiencia del usuario.
+        - Requisitos para ser una PWA:
+            - Utilizar HTTPS.
+            - Contar con archivo Web App Manifest y conjunto de íconos.
+            - Dar soport offline por Service Worker. 
+
 ### **FRAMEWORKS**
 - Conjunto de herramientas.
 - Cuentan con funcionalidades integradas para no requerir librerías externas.
