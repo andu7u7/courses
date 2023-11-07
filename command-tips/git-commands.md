@@ -10,8 +10,11 @@ git init --initial-branch=<name-branch>: crea un repositorio con rama por defect
 git init -b <name-branch>: crea un repositorio con rama por defecto.
 git clone: crea una copia del repositorio en local.
 git add (archivo o ruta): agrega archivo(s) a Staging.
+git add -A: trackea todos los archivos.
 git commit -m "mensaje": guarda cambios de manera local con un mensaje.
-git commit -am "mensaje": fusión de add y commit -m (solo si los archivos ya están trackeados).
+git commit -am "mensaje": fusión de add y commit -m (solo archivos que ya han sido trackeados).
+git commit -a -m "mensaje": fusión de add y commit.
+git commit -m "mensaje" <archivo>: guarda cambios y agrega archivo (omite el -a).
 ```
 
 ### **Branchs**
@@ -21,7 +24,10 @@ git branch: muestra las ramas y en cuál nos encontramos.
 git branch (nombre_rama): crear una nueva rama.
 git checkout (nombre_rama): moverse entre ramas.
 git checkout -b (nombre_rama): fusión de branch y checkout.
+git checkout -- <archivo>: recuperar archivo borrado.
 git branch -d (nombre_rama): Borra la rama.
+git symbolic-ref HEAD refs/heads/main: hacer que HEAD apunte a otra rama.
+git branch --set-upstream-to origin/main: establecer por defecto la rama main de origin.
 ```
 
 ### **Remote**
@@ -30,7 +36,7 @@ git branch -d (nombre_rama): Borra la rama.
 git remote -v: muestra el origin del repositorio (fetch - push)
 git remote rm (nombre): borramos el origin.
 git remote add (nombre) (origin): agregamos origin.
-git checkout (ID commit) (archivo): visualizar un archivo de un commit anterior.
+git request-pull -p <origin/branch>: solicitud de incorporación de cambios.
 git fetch: traemos cambios del servidor remoto al repo local.
 git merge (nombre_rama): fusión de ramas con mensaje (nos ubicamos en la rama donde queremos sumarle los cambios)
 git merge --abort: detenemos merge.
@@ -43,7 +49,9 @@ git push (remoto) (local): mandar cambios al repositorio remoto.
 ```
 git reset (ID commit) --soft: regresamos a ese commit pero mantenemos los nuevos cambios en Staging.
 git reset (ID commit) --hard: regresamos a ese commit (no recomendado).
+git reset (ID commit / HEAD) <archivo>: recupera archivo de cierto commit.
 git reset HEAD: saca los cambios de Staging, pero no los borra. Opuesto a git add.
+git rm <archivo>: elimina archivo (no podemos recuperarlo con git checkout, solo regresando entre commits).
 git rm: elimina los archivos, pero no su historial. Si queremos recuperar algo, solo hay que regresar entre commits, se debe usar con especificaciones.
     --cached: elimina los archivos en Staging pero los mantiene en el disco duro.
     --force: elimina los archivos de git y del disco duro.
