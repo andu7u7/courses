@@ -1,9 +1,13 @@
 # Commands Git
 
+## VCS (Version Control System) - SCM (System Control Management)
+
 ### **Basics**
 
 ```
 git init: crea un repositorio.
+git init --initial-branch=<name-branch>: crea un repositorio con rama por defecto.
+git init -b <name-branch>: crea un repositorio con rama por defecto.
 git clone: crea una copia del repositorio en local.
 git add (archivo o ruta): agrega archivo(s) a Staging.
 git commit -m "mensaje": guarda cambios de manera local con un mensaje.
@@ -74,4 +78,12 @@ Localizar commits por fechas:
 git log --after="2018-1-2"
 git log --after="today" y
 git log --after="2018-1-2" --before="today"
+```
+
+### **Ayuda**
+
+```
+git help: ayuda de comandos.
+git help <comando>: ayuda de un comando en específico.
+git help tutorial: ayuda interactiva de comandos.
 ```
