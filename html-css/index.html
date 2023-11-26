@@ -1,0 +1,222 @@
+<!-- Le decimos al navegador como debe renderizar el contenido -->
+<!DOCTYPE html>
+
+<html lang="en"> <!-- Lenguaje de la página -->
+
+<!-- Aquí van los metadatos, estilos e información sobre nuestra web -->
+<!-- SEO (Search Engine Optimization) - Mejoramos la visibilidad del sitio web en resultados de búsqueda -->
+
+<head>
+    <!-- Codificación de caracteres (tildes, emojis, etc) -->
+    <meta charset="UTF-8">
+
+    <!-- Escala de la página para adaptarse a la pantalla de cualquier dispositivo -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Importante para google, le decimos que tiene que indexar la página y seguir los enlaces -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Le decimos al navegador que color debe usar en la barra de navegación (solo en versión compacta) -->
+    <meta name="theme-color" content="#09f">
+
+    <!-- Título de la página (texto que aparece en la ventana)-->
+    <title>Portfolio Andy Rojas</title>
+
+    <!-- Favicon de la página -->
+    <!-- Nota: Normalmente podemos encontrar en network como el navegador hace una petición a favicon.ico -->
+    <link rel="icon" type="image/jpg"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Spider-Man.jpg/1200px-Spider-Man.jpg">
+
+    <!-- Describe el contenido de la página para los buscadores -->
+    <meta name="description" content="Portfolio de Andy Rojas">
+
+    <!-- OPEN GRAPH (hecho por meta) -->
+    <!-- Muestra información de la página cuando se comparte en redes sociales (otras páginas) -->
+    <!-- Indica donde están los objetos esenciales que se quieren compartir -->
+    <meta property="og:title" content="Portfolio Andy Rojas">
+    <meta property="og:description" content="Portfolio de Andy Rojas">
+    <meta property="og:image"
+        content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Spider-Man.jpg/1200px-Spider-Man.jpg">
+    <meta property="og:image:alt" content="Imagen de spider-man mirando al lado en una comicon">
+
+    <!-- Informamos al navegador que esta página es una copia de otra en otro idioma -->
+    <link rel="alternate" href="http://localhost:3000/index.html" hreflang="es-MX">
+
+    <!-- Informamos al navegador que la página original es esta (es canon de golpe)-->
+    <link rel="canonical" href="http://localhost:3000/index.html">
+
+    <!-- Permite estilar el contenido -->
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnOpenDialog = document.getElementById('opendialog');
+            const btnCloseDialog = document.getElementById('closedialog');
+            const dialog = document.getElementById('dialog');
+
+            btnCloseDialog.addEventListener('click', () => {
+                dialog.close();
+            });
+
+            btnOpenDialog.addEventListener('click', () => {
+                dialog.showModal();
+            });
+
+        });
+    </script>
+</head>
+
+<!-- Las etiquetas tienen estilos por defecto por el navegador (user agent stylesheet) -->
+
+<body>
+    <header>
+        <h1>Portfolio Andy Rojas </h1>
+        <nav>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
+        </nav>
+    </header>
+
+    <!-- Etiqueta que agrupa contenido que hace único (principal) a cada página -->
+    <!-- Nota: Solo puede haber una -->
+    <main>
+        <!-- Los elementos reemplazables no necesita etiqueta de cierre -->
+        <!-- Puedes obviar las comillas en los valores de los atributos -->
+        <p> <strong>+1 año</strong> de experiencia como <strong>programador junior</strong>.</p>
+        <img style="width: 50%; aspect-ratio: 3/2;"
+            src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Spider-Man.jpg/1200px-Spider-Man.jpg
+            alt="Una foto de Spider-Man en una comicon mirando al lado" title="Foto de Spider-Man">
+
+        <aside>
+            <h2>Tecnologías favoritas</h2>
+            <ul>
+                <li>HTML
+                <li>CSS
+                <li>NodeJS
+                <li>Angular
+                <li>NestJS
+                <li>JavaScript
+                <li>TypeScript
+                <li>Docker
+                <li>MySQL
+            </ul>
+        </aside>
+
+        <!-- Atributo role permite que el navegador sepa que es un botón (trata de evitar esto, usa siempre semántica) -->
+        <div role="button">
+            Haz click aquí
+        </div>
+
+        <dialog id="dialog" style="width: 40%;">
+            <h2>Este es un modal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium illum beatae quisquam rerum velit,
+                assumenda ducimus optio. Fugiat reiciendis placeat corporis nostrum neque eum, temporibus accusamus ex,
+                aspernatur impedit veritatis?</p>
+            <button id="closedialog" type="button">Cerrar</button>
+        </dialog>
+
+        <button id="opendialog" type="button">
+            Abrir
+        </button>
+
+        <section>
+            <header>
+                <h2 id="experiencia">Experiencia</h2>
+            </header>
+            <ul>
+                <!-- Existen etiquetas donde el cierre ya lo infiere el navegador  -->
+                <li>Practicante Programador junior en <a rel="noopener noreferrer" href="#" />Uceda
+                    School</a>
+                <li>Practicante Programador junior en <a target="_blank" rel="noopener noreferrer"
+                        href=https://interbank.pe />Interbank</a>
+            </ul>
+        </section>
+
+        <section>
+            <header>
+                <h2 id="proyectos">Proyectos</h2>
+            </header>
+            <article>
+                <h3>Proyecto 1</h3>
+                <p>Descripción del proyecto 1</p>
+                <a href="#" rel="noopener noreferrer">Proyecto 1</a>
+                <footer>
+                    <small>Tecnologías usadas: <em> Inserte las tecnologías</em> </small>
+                </footer>
+            </article>
+            <article>
+                <h3>Proyecto 2</h3>
+                <p>Descripción del proyecto 2</p>
+                <a href="#" rel="noopener noreferrer">Proyecto 2</a>
+                <footer>
+                    <small>Tecnologías usadas: <em> Inserte las tecnologías</em> </small>
+                </footer>
+            </article>
+            <article>
+                <h3>Proyecto 3</h3>
+                <p>Descripción del proyecto 3</p>
+                <a href="#" rel="noopener noreferrer">Proyecto 3</a>
+                <footer>
+                    <small>Tecnologías usadas: <em> Inserte las tecnologías</em> </small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2>Preguntas frecuentes</h2>
+            <details open>
+                <summary>¿Qué lenguaje de programación te gusta más?</summary>
+                <p>Me gusta más JavaScript</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <!-- Colocamos lazy loading para que lo cargue solo cuando realmente lo necesite (también depende de la conexión) -->
+            <img loading="lazy" style="width: 40%; aspect-ratio: 16/9;"
+                src="https://i.blogs.es/4d5a9c/spiderman-4/1366_2000.jpeg"
+                alt="Foto de spiderman agarrandose la cabeza por preocupación" title="Foto de spider-man preocupado">
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Datos principales</legend>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ejm: Andy Rojas" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@example.com" required>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+51 987654321" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos Adicionales</legend>
+                    <label for="language">¿Cuál es tu lenguaje favorito?</label>
+                    <input list="languages" type="text" id="language" name="language" required>
+                </fieldset>
+
+                <datalist id="languages">
+                    <option value="JavaScript"></option>
+                    <option value="Java"></option>
+                    <option value="Python"></option>
+                    <option value="Go"></option>
+                </datalist>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <br>
+    <footer>
+        <!-- Protocolos extra de la etiqueta a -->
+        <a target="_blank" rel="noreferrer" href="mailto:ajrm0330@gmail.com">Envíame un correo!</a>
+        <a target="_blank" rel="noreferrer" href="tel:+51996359603">Llámame!</a>
+        <a target="_blank" rel="noreferrer" href="https://wa.me/+51996359603/?text=Hola, cómo estás?">Escríbeme!</a>
+        <small>Copyright®️ 2023 Andy Rojas</small>
+    </footer>
+</body>
+
+</html>
