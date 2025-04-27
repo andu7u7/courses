@@ -46,28 +46,10 @@
     <link rel="canonical" href="http://localhost:3000/index.html">
 
     <!-- Permite estilar el contenido -->
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btnOpenDialog = document.getElementById('opendialog');
-            const btnCloseDialog = document.getElementById('closedialog');
-            const dialog = document.getElementById('dialog');
-
-            btnCloseDialog.addEventListener('click', () => {
-                dialog.close();
-            });
-
-            btnOpenDialog.addEventListener('click', () => {
-                dialog.showModal();
-            });
-
-        });
-    </script>
+    <!-- Permite ejecutar código javascript -->
+    <script defer src="script.js"></script>
 </head>
 
 <!-- Las etiquetas tienen estilos por defecto por el navegador (user agent stylesheet) -->
@@ -215,7 +197,7 @@
         <a target="_blank" rel="noreferrer" href="mailto:ajrm0330@gmail.com">Envíame un correo!</a>
         <a target="_blank" rel="noreferrer" href="tel:+51996359603">Llámame!</a>
         <a target="_blank" rel="noreferrer" href="https://wa.me/+51996359603/?text=Hola, cómo estás?">Escríbeme!</a>
-        <small>Copyright®️ 2023 Andy Rojas</small>
+        <small>Copyright&copy; 2023 Andy Rojas</small>
     </footer>
 </body>
 

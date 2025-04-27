@@ -1,8 +1,11 @@
 {
-  "name": "courses",
+  "name": "courses-monorepo",
   "version": "1.0.0",
-  "description": "### APRENDIZAJES - DOM Manipulation (JavaScript) - JavaScript (ES6) - `ECMAScript 6` - TypeScript - CSS",
-  "main": "index.js",
+  "description": "Monorepo para cursos y aprendizajes de varios lenguajes y tecnologías",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +13,16 @@
     "type": "git",
     "url": "git+https://github.com/andu7u7/courses.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "monorepo",
+    "javascript",
+    "typescript",
+    "python",
+    "html",
+    "css",
+    "learning"
+  ],
+  "author": "Andy Rojas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andu7u7/courses/issues"
