@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Finanzas Personales</title>
+    <style>
+      body {
+        font-family: Roboto;
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
-    <tarjeta-saldo></tarjeta-saldo>    
+    <tarjeta-saldo ingresos="2500" gastos="3000"></tarjeta-saldo>
+    <tarjeta-saldo ingresos="2500" gastos="2000"></tarjeta-saldo>
+    <tarjeta-saldo ingresos="3000" gastos="100"></tarjeta-saldo>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
